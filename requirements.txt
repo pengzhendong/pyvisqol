@@ -1,2 +1,4 @@
+click
 librosa
+modelscope
 numpy

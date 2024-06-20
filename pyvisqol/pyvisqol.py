@@ -13,9 +13,22 @@
 # limitations under the License.
 
 import os
+import platform
+import sys
 
 import librosa
 import numpy as np
+from modelscope.hub.file_download import model_file_download
+
+visqol_lib = os.path.join(os.path.dirname(__file__), "visqol_lib_py.so")
+if not os.path.exists(visqol_lib):
+    python_version = f"{sys.version_info.major}{sys.version_info.minor}"
+    src = model_file_download(
+        "pengzhendong/visqol",
+        f"visqol_lib_py_{platform.system().lower()}_py{python_version}.so",
+    )
+    os.symlink(src, visqol_lib)
+
 from . import visqol_lib_py
 from .pb2 import visqol_config_pb2
 from .pb2 import similarity_result_pb2
@@ -37,7 +50,8 @@ class Visqol:
         else:
             raise ValueError(f"Unrecognized mode: {mode}")
         config.options.svr_model_path = os.path.join(
-            os.path.dirname(visqol_lib_py.__file__), "model", svr_model_path)
+            os.path.dirname(visqol_lib_py.__file__), "model", svr_model_path
+        )
 
         self.api = visqol_lib_py.VisqolApi()
         self.api.Create(config)

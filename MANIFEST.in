@@ -1,3 +1,4 @@
+include requirements.txt
 include VERSION
 include pyvisqol/model *.tflite
 include pyvisqol/model *.txt

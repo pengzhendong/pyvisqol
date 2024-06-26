@@ -28,6 +28,7 @@ setup(
             "pyvisqol = pyvisqol.cli:main",
         ]
     },
+    install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",

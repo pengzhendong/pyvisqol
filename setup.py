@@ -14,7 +14,6 @@
 
 from setuptools import setup
 
-
 with open("requirements.txt", encoding="utf8") as f:
     requirements = f.readlines()
 

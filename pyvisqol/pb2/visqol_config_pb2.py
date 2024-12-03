@@ -7,50 +7,57 @@ from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
+
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
 
 
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(
+    b'\n\x13visqol_config.proto\x12\x06Visqol"\xa9\x03\n\x0cVisqolConfig\x12\x33\n\x05\x61udio\x18\x01 \x01(\x0b\x32$.Visqol.VisqolConfig.VisqolAudioInfo\x12\x33\n\x07options\x18\x02 \x01(\x0b\x32".Visqol.VisqolConfig.VisqolOptions\x1a&\n\x0fVisqolAudioInfo\x12\x13\n\x0bsample_rate\x18\x01 \x01(\x05\x1a\x86\x02\n\rVisqolOptions\x12\x18\n\x10output_mos_score\x18\x01 \x01(\x08\x12\x16\n\x0esvr_model_path\x18\x02 \x01(\t\x12\x1a\n\x12use_speech_scoring\x18\x03 \x01(\x08\x12\x1d\n\x15\x64\x65tect_voice_activity\x18\x04 \x01(\x08\x12&\n\x1e\x61llow_unsupported_sample_rates\x18\x05 \x01(\x08\x12\'\n\x1fuse_unscaled_speech_mos_mapping\x18\x06 \x01(\x08\x12\x1c\n\x14search_window_radius\x18\x07 \x01(\x05\x12\x19\n\x11use_lattice_model\x18\x08 \x01(\x08\x62\x06proto3'
+)
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13visqol_config.proto\x12\x06Visqol\"\xa9\x03\n\x0cVisqolConfig\x12\x33\n\x05\x61udio\x18\x01 \x01(\x0b\x32$.Visqol.VisqolConfig.VisqolAudioInfo\x12\x33\n\x07options\x18\x02 \x01(\x0b\x32\".Visqol.VisqolConfig.VisqolOptions\x1a&\n\x0fVisqolAudioInfo\x12\x13\n\x0bsample_rate\x18\x01 \x01(\x05\x1a\x86\x02\n\rVisqolOptions\x12\x18\n\x10output_mos_score\x18\x01 \x01(\x08\x12\x16\n\x0esvr_model_path\x18\x02 \x01(\t\x12\x1a\n\x12use_speech_scoring\x18\x03 \x01(\x08\x12\x1d\n\x15\x64\x65tect_voice_activity\x18\x04 \x01(\x08\x12&\n\x1e\x61llow_unsupported_sample_rates\x18\x05 \x01(\x08\x12\'\n\x1fuse_unscaled_speech_mos_mapping\x18\x06 \x01(\x08\x12\x1c\n\x14search_window_radius\x18\x07 \x01(\x05\x12\x19\n\x11use_lattice_model\x18\x08 \x01(\x08\x62\x06proto3')
-
-
-
-_VISQOLCONFIG = DESCRIPTOR.message_types_by_name['VisqolConfig']
-_VISQOLCONFIG_VISQOLAUDIOINFO = _VISQOLCONFIG.nested_types_by_name['VisqolAudioInfo']
-_VISQOLCONFIG_VISQOLOPTIONS = _VISQOLCONFIG.nested_types_by_name['VisqolOptions']
-VisqolConfig = _reflection.GeneratedProtocolMessageType('VisqolConfig', (_message.Message,), {
-
-  'VisqolAudioInfo' : _reflection.GeneratedProtocolMessageType('VisqolAudioInfo', (_message.Message,), {
-    'DESCRIPTOR' : _VISQOLCONFIG_VISQOLAUDIOINFO,
-    '__module__' : 'visqol_config_pb2'
-    # @@protoc_insertion_point(class_scope:Visqol.VisqolConfig.VisqolAudioInfo)
-    })
-  ,
-
-  'VisqolOptions' : _reflection.GeneratedProtocolMessageType('VisqolOptions', (_message.Message,), {
-    'DESCRIPTOR' : _VISQOLCONFIG_VISQOLOPTIONS,
-    '__module__' : 'visqol_config_pb2'
-    # @@protoc_insertion_point(class_scope:Visqol.VisqolConfig.VisqolOptions)
-    })
-  ,
-  'DESCRIPTOR' : _VISQOLCONFIG,
-  '__module__' : 'visqol_config_pb2'
-  # @@protoc_insertion_point(class_scope:Visqol.VisqolConfig)
-  })
+_VISQOLCONFIG = DESCRIPTOR.message_types_by_name["VisqolConfig"]
+_VISQOLCONFIG_VISQOLAUDIOINFO = _VISQOLCONFIG.nested_types_by_name["VisqolAudioInfo"]
+_VISQOLCONFIG_VISQOLOPTIONS = _VISQOLCONFIG.nested_types_by_name["VisqolOptions"]
+VisqolConfig = _reflection.GeneratedProtocolMessageType(
+    "VisqolConfig",
+    (_message.Message,),
+    {
+        "VisqolAudioInfo": _reflection.GeneratedProtocolMessageType(
+            "VisqolAudioInfo",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _VISQOLCONFIG_VISQOLAUDIOINFO,
+                "__module__": "visqol_config_pb2",
+                # @@protoc_insertion_point(class_scope:Visqol.VisqolConfig.VisqolAudioInfo)
+            },
+        ),
+        "VisqolOptions": _reflection.GeneratedProtocolMessageType(
+            "VisqolOptions",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _VISQOLCONFIG_VISQOLOPTIONS,
+                "__module__": "visqol_config_pb2",
+                # @@protoc_insertion_point(class_scope:Visqol.VisqolConfig.VisqolOptions)
+            },
+        ),
+        "DESCRIPTOR": _VISQOLCONFIG,
+        "__module__": "visqol_config_pb2",
+        # @@protoc_insertion_point(class_scope:Visqol.VisqolConfig)
+    },
+)
 _sym_db.RegisterMessage(VisqolConfig)
 _sym_db.RegisterMessage(VisqolConfig.VisqolAudioInfo)
 _sym_db.RegisterMessage(VisqolConfig.VisqolOptions)
 
-if _descriptor._USE_C_DESCRIPTORS == False:
-
-  DESCRIPTOR._options = None
-  _VISQOLCONFIG._serialized_start=32
-  _VISQOLCONFIG._serialized_end=457
-  _VISQOLCONFIG_VISQOLAUDIOINFO._serialized_start=154
-  _VISQOLCONFIG_VISQOLAUDIOINFO._serialized_end=192
-  _VISQOLCONFIG_VISQOLOPTIONS._serialized_start=195
-  _VISQOLCONFIG_VISQOLOPTIONS._serialized_end=457
+if not _descriptor._USE_C_DESCRIPTORS:
+    DESCRIPTOR._options = None
+    _VISQOLCONFIG._serialized_start = 32
+    _VISQOLCONFIG._serialized_end = 457
+    _VISQOLCONFIG_VISQOLAUDIOINFO._serialized_start = 154
+    _VISQOLCONFIG_VISQOLAUDIOINFO._serialized_end = 192
+    _VISQOLCONFIG_VISQOLOPTIONS._serialized_start = 195
+    _VISQOLCONFIG_VISQOLOPTIONS._serialized_end = 457
 # @@protoc_insertion_point(module_scope)

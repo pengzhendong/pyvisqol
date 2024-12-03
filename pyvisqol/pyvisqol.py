@@ -30,8 +30,7 @@ if not os.path.exists(visqol_lib):
     os.symlink(src, visqol_lib)
 
 from . import visqol_lib_py
-from .pb2 import visqol_config_pb2
-from .pb2 import similarity_result_pb2
+from .pb2 import similarity_result_pb2, visqol_config_pb2
 
 
 class Visqol:
@@ -49,9 +48,7 @@ class Visqol:
             svr_model_path = "lattice_tcditugenmeetpackhref_ls2_nl60_lr12_bs2048_learn.005_ep2400_train1_7_raw.tflite"
         else:
             raise ValueError(f"Unrecognized mode: {mode}")
-        config.options.svr_model_path = os.path.join(
-            os.path.dirname(visqol_lib_py.__file__), "model", svr_model_path
-        )
+        config.options.svr_model_path = os.path.join(os.path.dirname(visqol_lib_py.__file__), "model", svr_model_path)
 
         self.api = visqol_lib_py.VisqolApi()
         self.api.Create(config)

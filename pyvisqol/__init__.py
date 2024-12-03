@@ -12,4 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .pyvisqol import *
+from .pyvisqol import Visqol
+
+__all__ = ["Visqol"]
